@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:shope_app/cubit/shop_cubit.dart';
 import 'package:shope_app/modules/screens/on_bording_screen.dart';
 import 'package:shope_app/style/thems.dart';
 
@@ -12,12 +14,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
-      theme: lightTheme,
-      darkTheme: darkTheme,
-      themeMode: ThemeMode.light,
-
-      home:const OnBoardingSCreen(),
+    return  MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (context) => ShopCubit(),)
+      ],
+      child: MaterialApp(
+        theme: lightTheme,
+        darkTheme: darkTheme,
+        themeMode: ThemeMode.light,
+    
+        home:const OnBoardingSCreen(),
+      ),
     );
   }
 }
