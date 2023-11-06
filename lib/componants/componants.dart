@@ -13,3 +13,45 @@ Widget buildOnBoardingItem(OnBordingModel model)=> Column(
           
         ],
       );
+      Widget defaultTextbutton(
+        {required String? text,
+        required void Function()? onPressed,
+        Color  color=Colors.green,
+        }
+      )=>Container(
+                width: double.infinity,
+                height: 55,
+                decoration: BoxDecoration(
+                  color: color,
+                  
+                  borderRadius: BorderRadius.circular(12)
+                ),
+                
+                child: TextButton(
+                  onPressed: onPressed,
+                   child: Text(text!,style:const TextStyle(color: Colors.white,fontSize: 20),),),
+              );
+      Widget defaulatTextFormField({
+        required TextEditingController controller,
+        required TextInputType type,
+        required String hinttext,
+        required Widget prefixIcon,
+        required String? Function(String?)? validator,
+       bool ispassword=false,
+       Widget? sufixIcon,
+      
+      })=>    TextFormField(
+              validator: validator,
+              
+              keyboardType: type,
+              controller:controller,
+              decoration:InputDecoration(
+                hintText: hinttext,
+                prefixIcon:prefixIcon,
+                suffixIcon: sufixIcon,
+                
+                
+                border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(12)
+              )) ,
+            );

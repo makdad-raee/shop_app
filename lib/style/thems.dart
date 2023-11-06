@@ -5,9 +5,9 @@ import 'package:hexcolor/hexcolor.dart';
 
 ThemeData lightTheme =ThemeData(
   textTheme: GoogleFonts.latoTextTheme().copyWith(
-    bodyLarge: GoogleFonts.lato(fontSize: 30,fontWeight: FontWeight.bold),
-    bodyMedium: GoogleFonts.lato(fontSize: 25,fontWeight: FontWeight.bold),
-    bodySmall: GoogleFonts.lato(fontSize: 40,fontWeight: FontWeight.bold),
+    bodyLarge: GoogleFonts.lato(fontSize: 40,fontWeight: FontWeight.bold),
+    bodyMedium: GoogleFonts.lato(fontSize: 28,fontWeight: FontWeight.bold),
+    bodySmall: GoogleFonts.lato(fontSize:18 ,fontWeight: FontWeight.bold),
     
   ),
               floatingActionButtonTheme: const FloatingActionButtonThemeData(
