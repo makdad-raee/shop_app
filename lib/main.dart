@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shope_app/cubit/shop_cubit.dart';
-import 'package:shope_app/modules/screens/on_bording_screen.dart';
+import 'package:shope_app/modules/onboarding/on_bording_screen.dart';
 import 'package:shope_app/style/thems.dart';
 
 void main() {

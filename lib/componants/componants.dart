@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shope_app/modules/onboarding_models.dart';
+const defaulColor=Colors.green;
 
 Widget buildOnBoardingItem(OnBordingModel model)=> Column(
         crossAxisAlignment: CrossAxisAlignment.start,

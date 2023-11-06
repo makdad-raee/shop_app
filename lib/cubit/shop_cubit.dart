@@ -1,9 +1,11 @@
+import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shope_app/cubit/shop_states.dart';
 import 'package:shope_app/modules/onboarding_models.dart';
 
 class ShopCubit extends Cubit<ShopState>{
   ShopCubit():super(ShopintialState());
+
   static ShopCubit get(context)=>BlocProvider.of(context);
 
   List<OnBordingModel> onBording=[
@@ -11,4 +13,6 @@ class ShopCubit extends Cubit<ShopState>{
     OnBordingModel(body: 'On Board 2 body', title: 'On Board 2 title'),
     OnBordingModel(body: 'On Board 3 body', title: 'On Board 3 title')
   ];
+  PageController pageController=PageController();
+  bool isLast=false;
 }
